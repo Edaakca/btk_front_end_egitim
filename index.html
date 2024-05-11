@@ -15,8 +15,7 @@
 </head>
 
 <body>
-    <header>
-        <div class="top-bar">
+    <div class="top-bar">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-6"> <!--col-12 çünkü mobilde ekranın tamamının yarısını alacağız -->
@@ -46,7 +45,7 @@
                 </div>
             </div>
         </div>
-
+    <header class="sticky-top"> <!--Navbarın sürekli üstte gözükmesini saglıyor (alta kaydırdıgımızda)-->
 
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container">
@@ -63,7 +62,7 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link" href="blog.html">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Pricing</a>
@@ -76,60 +75,66 @@
                 </div>
             </div>
         </nav>
+        
     </header>
 
-   <section class="slider-main-wrapper">
-    <div class="swiper slider--main">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="slider-main">
-                    <div class="container position-relative">
-                        <div class="slider-main-content "> <!-- (d-none d-lg-flex )Tablette metni yok ettik -->
-                            <div class="slider-main-content-top-info">
-                                MEDICAL PROFESSIONALS
+    <section class="slider-main-wrapper">
+        <div class="swiper slider--main">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slider-main">
+                        <div class="container position-relative">
+                            <div class="slider-main-content "> <!-- (d-none d-lg-flex )Tablette metni yok ettik -->
+                                <div class="slider-main-content-top-info">
+                                    MEDICAL PROFESSIONALS
+                                </div>
+                                <div class="slider-main-content-title">
+                                    Makes Your Health Better Will Makes Us Better
+                                </div>
+                                <div class="slider-main-content-desc">
+                                    Our team of highly trained professionals uses the latest healing technologies to
+                                    restore
+                                    you to pain-free health quickly and easily.
+                                </div>
+                                <a href="#" class="btn-main-blue">Get Started</a>
                             </div>
-                            <div class="slider-main-content-title">
-                                Makes Your Health Better Will Makes Us Better
-                            </div>
-                            <div class="slider-main-content-desc">
-                                Our team of highly trained professionals uses the latest healing technologies to restore
-                                you to pain-free health quickly and easily.
-                            </div>
-                            <a href="#" class="btn-main-blue">Get Started</a>
                         </div>
+                        <img src="assets/img/slider/background.png" class="slider-main-img" alt="slider 1">
                     </div>
-                    <img src="assets/img/slider/background.png" class="slider-main-img" alt="slider 1">
                 </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="slider-main">
-                    <div class="container position-relative">
-                        <div class="slider-main-content">
-                            <div class="slider-main-content-top-info">
-                                MEDICAL PROFESSIONALS
+                <div class="swiper-slide">
+                    <div class="slider-main">
+                        <div class="container position-relative">
+                            <div class="slider-main-content">
+                                <div class="slider-main-content-top-info">
+                                    MEDICAL PROFESSIONALS
+                                </div>
+                                <div class="slider-main-content-title">
+                                    Makes Your Health Better Will Makes Us Better
+                                </div>
+                                <div class="slider-main-content-desc">
+                                    Our team of highly trained professionals uses the latest healing technologies to
+                                    restore
+                                    you to pain-free health quickly and easily.
+                                </div>
+                                <a href="#" class="btn-main-blue">Get Started</a>
                             </div>
-                            <div class="slider-main-content-title">
-                                Makes Your Health Better Will Makes Us Better
-                            </div>
-                            <div class="slider-main-content-desc">
-                                Our team of highly trained professionals uses the latest healing technologies to restore
-                                you to pain-free health quickly and easily.
-                            </div>
-                            <a href="#" class="btn-main-blue">Get Started</a>
                         </div>
+                        <img src="assets/img/slider/background.png" class="slider-main-img" alt="slider 1">
                     </div>
-                    <img src="assets/img/slider/slider-1.jpg" class="slider-main-img" alt="slider 1">
                 </div>
             </div>
         </div>
-    </div>
-    <script>
-        const sliderMain = new Swiper(".slider--main", {
-            slidesPerView: 1,
-            spaceBetween: 0,
-        });
-    </script>
-</section>
+        <script>
+            document.addEventListener("DOMContentLoaded", (event) => {
+                    const sliderMain = new Swiper(".slider--main", {
+                slidesPerView: 1,
+                spaceBetween: 0,
+            });
+                });
+            
+        </script>
+    </section>
 
     <section class="mb-5">
         <div class="container">
@@ -141,7 +146,8 @@
                 </div>
             </div>
             <div class="row me-5">
-                <div class="col-12 col-md-6 col-3  mb-4"> <!--mobilde tam, tablette yarım ,geniş ekranda ise col-3 yaptık-->
+                <div class="col-12 col-md-6 col-3  mb-4">
+                    <!--mobilde tam, tablette yarım ,geniş ekranda ise col-3 yaptık-->
                     <div class="service-card">
                         <i class="service-card-icon-phone"> <!-- iconları i class ile yazarız-->
                             <img src="assets/img/icon/phone.svg" alt="">
@@ -401,7 +407,8 @@
     <section>
         <section class="brand mb-5">
             <div class="container">
-                <div class="d-flex flex-wrap gap-4 justify-content-center justify-content-lg-between"><!--flex-wap ile sıgmadıgı yerden sonra alt tarafa geçiyor ,sonra kırılma kısmına kadar ortalıyor sonra kırılma kısmı-->
+                <div class="d-flex flex-wrap gap-4 justify-content-center justify-content-lg-between">
+                    <!--flex-wap ile sıgmadıgı yerden sonra alt tarafa geçiyor ,sonra kırılma kısmına kadar ortalıyor sonra kırılma kısmı-->
                     <img src="assets/img/icon/1.svg" alt="">
                     <img src="assets/img/icon/2.svg" alt="">
                     <img src="assets/img/icon/3.svg" alt="">
@@ -466,18 +473,18 @@
                                 <div class="special-care-img h-100">
                                     <img src="assets/img/doctor.jpg" class="w-100 h-100" alt="">
                                 </div>
-                    
+
                             </div>
                             <div class="col-6">
                                 <div class="special-care-img h-100 ">
                                     <img src="assets/img/doctor1.jpg" class="w-100 h-100" alt="">
                                 </div>
-                    
-                    
+
+
                             </div>
                         </div>
-                    
-                    
+
+
                     </div>
                 </div>
 
@@ -585,21 +592,21 @@
         </div>
         <script>
             const sliderFeedbackCard = new Swiper(".slider--feedback-card", {
-                slidesPerView:1,
+                slidesPerView: 1,
                 spaceBetween: 30,
-                 breakpoints: {
-                    768: { 
+                breakpoints: {
+                    768: {
                         slidesPerView: 2,
                         spaceBetween: 30,
                     },
-                    992:{
+                    992: {
                         slidesPerView: 3,
                         spaceBetween: 30,
                     }
-                   
+
                 }
             });
-           
+
         </script>
     </section>
 
@@ -754,12 +761,12 @@
             var swiper1 = new Swiper(".slider--team", {
                 slidesPerView: 1,
                 spaceBetween: 30,
-                breakpoints:{
-                   768:{
-                         slidesPerView: 2,
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
                         spaceBetween: 15,
                     },
-                    992:{
+                    992: {
                         slidesPerView: 3,
                         spaceBetween: 30,
                     }
@@ -770,30 +777,30 @@
 
                 slidesPerView: 1,
                 spaceBetween: 30,
-                breakpoints:{
+                breakpoints: {
                     768: {
-                    slidesPerView: 2,
-                    spaceBetween: 15,
-                },
-                992: {
-                    slidesPerView: 5,
-                    spaceBetween: 15,
+                        slidesPerView: 2,
+                        spaceBetween: 15,
+                    },
+                    992: {
+                        slidesPerView: 5,
+                        spaceBetween: 15,
+                    }
                 }
-                }
-                
+
 
             });
         </script>
     </section>
     <section>
         <div class="container">
-        <div class="d-flex justify-content-between align-items-center mb-5">
-            <div>
-                <span class="section-service-title fs-6">News Update</span>
-                <div class="fs-3 fw-semibold">Latest Healthcare Articles</div>
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <div>
+                    <span class="section-service-title fs-6">News Update</span>
+                    <div class="fs-3 fw-semibold">Latest Healthcare Articles</div>
+                </div>
+                <a href="#" class="btn-main-blue-outline">Read All News</a>
             </div>
-            <a href="#" class="btn-main-blue-outline">Read All News</a>
-        </div>
 
             <div class="row">
                 <div class="col-12 col-lg-6">
@@ -893,20 +900,20 @@
                     <div class="row mb-5">
                         <div class="col-4 col-lg-6">
                             <div class="footer-sitemap">
-                            <div class="fs-5 fw-medium mb-3">
-                                Explore
-                            </div>
-                            <a href="#"> Home</a>
-                            <a href="#"> Services</a>
-                            <a href="#"> About us</a>
-                            <a href="#"> Testimonials</a>
-                            <a href="#"> News</a>
+                                <div class="fs-5 fw-medium mb-3">
+                                    Explore
+                                </div>
+                                <a href="#"> Home</a>
+                                <a href="#"> Services</a>
+                                <a href="#"> About us</a>
+                                <a href="#"> Testimonials</a>
+                                <a href="#"> News</a>
                             </div>
                         </div>
                         <div class="col-4 col-lg-6">
                             <div class="footer-sitemap">
                                 <div class="fs-5 fw-medium mb-3">
-                                Uitility Pages
+                                    Uitility Pages
                                 </div>
                                 <a href="#">Style Guide</a>
                                 <a href="#">Changelog</a>
@@ -922,13 +929,14 @@
                             <p class=" mb-3 text-body-tertiary">
                                 It is a long established fact that a reader will be distracted
                             </p>
-                        
-                            <input type="email" name="" id="" class="input-newsletter mb-3" placeholder="your email address">
+
+                            <input type="email" name="" id="" class="input-newsletter mb-3"
+                                placeholder="your email address">
                             <button class="btn-main-blue">Submit</button>
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -938,12 +946,10 @@
     </div>
 
 
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </body>
 
